@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    jdbcUrl: jdbc:informix-sqli://192.10.1.11:11547/eagle:INFORMIXSERVER=dealers_int;DBDATE=MDY4/;
+    username: sistem98
+    password: DcM1nt3r
+    driverClassName: com.informix.jdbc.IfxDriver
+  atenea:
+    jdbcUrl: jdbc:sqlserver://mercurio.dcm.com.mx//atenea:49444;databaseName=dcm
+    username: iusr_apolom
+    password: jBond007
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+server:
+  port: 9068
