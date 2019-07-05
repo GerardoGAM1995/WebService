@@ -5,7 +5,12 @@ spring:
     password: DcM1nt3r
     driverClassName: com.informix.jdbc.IfxDriver
   atenea:
-    jdbcUrl: jdbc:sqlserver://mercurio.dcm.com.mx//atenea:49444;databaseName=dcm
+    jdbcUrl: jdbc:sqlserver://mercurio.dcm.com.mx\\atenea:49444;databaseName=dcm
+    username: iusr_apolom
+    password: jBond007
+    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  apolo:
+    jdbcUrl: jdbc:sqlserver://mercurio.dcm.com.mx\\apolo:49580;databaseName=dcm
     username: iusr_apolom
     password: jBond007
     driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver

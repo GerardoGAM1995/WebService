@@ -11,11 +11,19 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class Tests {
 	
 	@Autowired
-	@Qualifier("datasource-ifx")
+	@Qualifier("informix")
 	JdbcTemplate jdbcTemplateIfx;
 	
-	@GetMapping("/Tests")
-	public String tests() 
+	@Autowired
+	@Qualifier("atenea")
+	JdbcTemplate jdbcTemplateAtn;
+	
+	@Autowired
+	@Qualifier("apolo")
+	JdbcTemplate jdbcTemplateApl;
+	
+	@GetMapping("/ifx")
+	public String ifx() 
 	{
 		String sql = "select * from item_digital_esd";
 		SqlRowSet rs = jdbcTemplateIfx.queryForRowSet(sql);
@@ -23,6 +31,30 @@ public class Tests {
 		{
 			System.out.println("es:"+rs.getString("item_num"));
 		}
-		return "hey";
+		return "ifx";
+	}
+	
+	@GetMapping("/atn")
+	public String atn() 
+	{
+		String sql = "select * from mensajesCredito;";
+		SqlRowSet rs = jdbcTemplateAtn.queryForRowSet(sql);
+		while(rs.next())
+		{
+			System.out.println("es:"+rs.getString("mensaje"));
+		}
+		return "atn";
+	}
+	
+	@GetMapping("/apl")
+	public String apl() 
+	{
+		String sql = "select * from mensajero;";
+		SqlRowSet rs = jdbcTemplateApl.queryForRowSet(sql);
+		while(rs.next())
+		{
+			System.out.println("es:"+rs.getString("nombre"));
+		}
+		return "apl";
 	}
 }
