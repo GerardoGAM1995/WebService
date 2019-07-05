@@ -1,9 +1,0 @@
-spring:
-  datasource:
-    url : jdbc:informix-sqli://192.10.1.11:11547/eagle:INFORMIXSERVER=dealers_int;DBDATE=MDY4/;
-    username : sistem98
-    password : DcM1nt3r
-    driverClassName : com.informix.jdbc.IfxDriver
-server:
-  port : 9068
-
