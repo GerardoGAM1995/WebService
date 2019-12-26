@@ -8,8 +8,8 @@
 		<version>2.1.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>pedidos.microsoft</groupId>
-	<artifactId>PedidosESD</artifactId>
+	<groupId>com.dcm</groupId>
+	<artifactId>wsFacturacion</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>PedidosESD</name>
